@@ -1,0 +1,29 @@
+#header-container{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    background-color: rgb(255, 136, 0);
+    transition: 0.5s;
+
+    align-items: center;
+    
+}
+
+#header-container :hover {
+    cursor:pointer;
+}
+
+#logo-container{
+    margin-left: 5%;
+}
+
+#navbar{
+    align-self: center;
+    display: flex;
+    margin-left: 10%;
+}
+
+ul a{
+ text-decoration: none;
+ color: black;
+}
