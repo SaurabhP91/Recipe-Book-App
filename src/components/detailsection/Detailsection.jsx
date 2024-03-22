@@ -44,7 +44,7 @@ const Detailsection = () => {
       <span id='recipe-image-container'>
 
         <img src={recipeimg}
-         id='recipe-image'/>        
+         id='recipe-image' alt='Recipe-Image'/>        
       </span>
 
       <span id='about-section'>
