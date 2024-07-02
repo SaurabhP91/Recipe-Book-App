@@ -17,8 +17,9 @@ const Search = () => {
     const navigate = useNavigate();
 
 
-    async function getResults(){
+    async function getResults(e){
         try{
+            e.preventDefault();
             let response = await axios.get(`${baseURL}findByIngredients?ingredients=${searchTerm}&number=10&apiKey=${api_key}`);
             setResults(response.data);
             resultRef.current.style.display = 'block';
@@ -71,11 +72,15 @@ const Search = () => {
                   <option value="Dessert">Dessert</option>
 
   </select>*/}
-            <input type='text' placeholder="Search recipes here by name or ingredient ..." 
-            className="searchinput" onChange={(e) => setSearchTerm(e.target.value)}/>
-            <span id='searchicon-container' onClick={getResults}>
-              <SearchIcon className="searchicon"/>
-            </span>
+            <form onSubmit={getResults} id='search-form'>
+              <input type='text' placeholder="Search recipes here by name or ingredient ..." 
+              className="searchinput" onChange={(e) => setSearchTerm(e.target.value)}/>
+              <span id='searchicon-container' onClick={getResults}>
+                <SearchIcon className="searchicon"/>
+              </span>
+
+            </form>
+          
         </span>
 
         <span id='results-list' ref={resultRef}>

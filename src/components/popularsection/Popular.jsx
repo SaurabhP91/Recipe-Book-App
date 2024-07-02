@@ -123,6 +123,7 @@ const Popular = () => {
             </span>
             <span id='dessert-image-container' className='popular-image-container'>
                 <img src={dessert?.image} id='dessert-image' className='popular-image'/>
+
             </span>
 
         </span>
@@ -160,6 +161,15 @@ const Popular = () => {
 
         </span>
       </div>
+
+      {/*SCRAP MOCK
+      <div id='popular-row3'>
+        <span id='popular-scrap' className='popular-tile' onClick={() => handleSelect(snack?.id)}>
+            Popular 
+        </span>
+
+      </div>
+      */}
 
 
     </div>

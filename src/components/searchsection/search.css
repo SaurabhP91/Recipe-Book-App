@@ -11,6 +11,12 @@
     border-bottom: 4px black solid;
 }
 
+#search-form{
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    display: flex;
+}
 #searchbar{
     height: auto;
     align-items: center;
